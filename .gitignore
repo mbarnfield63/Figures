@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Except:
+!.gitignore
+!README.md
+
+# All subdirectories
+!**/
+
+# Image and figure files
+!**/*.pdf
+!**/*.png
+!**/*.svg
+!**/*.tex
