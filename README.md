@@ -1,5 +1,8 @@
-# Figures
-## Using LaTex (TikZ)
+# Figures Using LaTex (TikZ)
 Figures for my thesis and other projects:
 
-1. [Isotopologue Basics](/Iso_basics/)
+*Thesis*
+1. Isotopologue Basics
+   a. [CO2 Isotopologue](/Iso_CO2/)
+   b. [CO Isotopologue](/Iso_CO/)
+2. [Isotopologue Extrapolation](/Isotopologue_extrapolation/)
