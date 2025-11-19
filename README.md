@@ -8,3 +8,4 @@ Figures for my thesis and other projects:
 2. [Isotopologue Extrapolation](/Isotopologue_extrapolation/)  
 3. [Neural Network – Basic CO₂ Structure](/neural_network_basic/)  
 4. [Neural Network – Combined CO/CO₂ Structure](/neural_network_shared/)
+5. [MARVEL Algorithm](/MARVEL/)
