@@ -16,3 +16,4 @@ Figures for my thesis and other projects:
     - [Single Trunk - CO2 Basic](/Neural_Networks/basic_CO2/neural_network_basic.pdf)
     - [Shared Trunk - Combined CO/CO₂](/Neural_Networks/shared_CO_CO2/neural_network_shared_trunk.pdf)
     - [Quantum Number Assignment for CO₂](/Neural_Networks/quantum_number_CO2/nn_qn_assignment.pdf)
+    - [Graph Neural Network](/Neural_Networks/GNN/gnn.pdf)
