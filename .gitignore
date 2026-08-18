@@ -4,6 +4,7 @@
 # Except:
 !.gitignore
 !README.md
+!CLAUDE.md
 
 # All subdirectories
 !**/
@@ -13,3 +14,7 @@
 !**/*.png
 !**/*.svg
 !**/*.tex
+
+# Skill files (.claude/skills/tikz-figures/)
+!**/*.md
+!**/*.py
