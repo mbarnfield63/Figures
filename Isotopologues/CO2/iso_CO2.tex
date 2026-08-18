@@ -17,7 +17,7 @@
       atom/.style={circle, draw, thick, minimum size=1.3cm, font=\sffamily\bfseries\color{white}},
       % Style for the double bond
       bond/.style={double, double distance=2pt, line width=1.5pt, gray!70},
-      % Style for the main text labels
+      % Style for the Parent text labels
       label node/.style={text=black, font=\sffamily\small},
       % Style for the guide lines
       guide line/.style={thin, gray!80, dashed},
@@ -26,7 +26,7 @@
    ]
 
     % =======================================================
-    % Top Molecule: Main Isotopologue (12C, 16O, 16O) - 626
+    % Top Molecule: Parent Isotopologue (12C, 16O, 16O) - 626
     % =======================================================
 
     % Position the atoms. The labels are now inside the nodes.
@@ -70,8 +70,8 @@
     \draw[guide line] (num738.north) -- (C_bottom.south);
     \draw[guide line] ($(num738.north) + (0.25cm, 0)$) -- (O2_bottom.south);
 
-    % Labels for Main/Minor Isotopologue - Placed slightly closer
-    \node[label node, above=0.1cm of num626.north] {Main Isotopologue};
+    % Labels for Parent/Minor Isotopologue - Placed slightly closer
+    \node[label node, above=0.1cm of num626.north] {Parent Isotopologue};
     \node[label node, below=0.1cm of num738.south] {Minor Isotopologue};
 
 \end{tikzpicture}
