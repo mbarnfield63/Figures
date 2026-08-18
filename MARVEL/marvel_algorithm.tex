@@ -8,6 +8,14 @@
 \usepackage{sansmath}
 \sansmath
 
+% UCL brand accessible data-viz palette
+\definecolor{uclDarkPurple}{HTML}{361A54}
+\definecolor{uclDarkBlue}{HTML}{12239E}
+\definecolor{uclLightPink}{HTML}{E645AB}
+\definecolor{uclLightBlue}{HTML}{118DFF}
+\definecolor{uclLightOrange}{HTML}{E66C37}
+\definecolor{uclLightGreen}{HTML}{1AAB40}
+
 \begin{document}
 
 \begin{tikzpicture}[
@@ -15,12 +23,13 @@
     font=\sffamily,
     >=Stealth,
     node distance=1cm,
+    every node/.style={text=white},
     % Style for energy dots and lines
-    level_dot/.style={circle, fill=black!80, inner sep=2.5pt},
-    level_line/.style={ultra thick, black!80, line cap=round},
+    level_dot/.style={circle, fill=uclLightGreen, inner sep=2.5pt},
+    level_line/.style={ultra thick, uclLightGreen, line cap=round},
     % --- STYLES FOR SOURCES ---
-    srcA/.style={->, very thick, color=blue!70!black},
-    srcB/.style={->, very thick, color=red!70!black},
+    srcA/.style={->, very thick, color=uclLightOrange},
+    srcB/.style={->, very thick, color=uclLightPink},
     % Style for the colored panels
     panel_bg/.style={rounded corners=10pt, inner sep=10pt, draw=none},
     % Style for headings
@@ -36,8 +45,8 @@
     \node[heading] at (1.25, 3.8) {1. Experimental\\Transitions};
     
     % Legend
-    \node[right, scale=0.7, text=blue!70!black] at (0.5, 3.3) {\textbf{--} Source A};
-    \node[right, scale=0.7, text=red!70!black] at (0.5, 3.0) {\textbf{--} Source B};
+    \node[right, scale=0.7, text=uclLightOrange] at (0.5, 3.3) {\textbf{--} Source A};
+    \node[right, scale=0.7, text=uclLightPink] at (0.5, 3.0) {\textbf{--} Source B};
 
     % TRANSFORMED TRANSITIONS: 
     % Vertical lines floating at the exact heights of the nodes in Panel 2
@@ -71,7 +80,7 @@
 
     % Nodes (Energy Levels)
     % G = Ground (y = -0.75)
-    \node[level_dot, label=below:{$0$ (Ground)}] (G) at (1, -0.75) {};
+    \node[level_dot, label={[text=white]below:{$0$ (Ground)}}] (G) at (1, -0.75) {};
     % A = Low (y = 0.25)
     \node[level_dot] (A) at (0, 0.25) {};
     % B = High (y = 1.75)
@@ -96,7 +105,7 @@
     \path (0,-1.5) -- (0,4.5);
 
     % Heading
-    \node[heading] at (1.25, 3.72) {3. Solved Levels\\(w/ unc.)};
+    \node[heading] at (1.25, 3.72) {3. Solved Levels\\(cm$^{-1}$)};
 
     % Ladder (5 Levels)
     \draw[level_line] (0,-0.75) -- (2,-0.75) node[right, font=\footnotesize] {$E=0.00$};
@@ -112,12 +121,9 @@
 
 %% --- BACKGROUND LAYERS ---
 \begin{scope}[on background layer]
-    % Panel 1: More Red
-    \node[panel_bg, fill=red!20, fit=(p1)] (bg1) {};
-    % Panel 2: More Orange/Yellow
-    \node[panel_bg, fill=orange!20, fit=(p2)] (bg2) {};
-    % Panel 3: Green
-    \node[panel_bg, fill=green!10, fit=(p3)] (bg3) {};
+    \node[panel_bg, fill=uclDarkPurple, fit=(p1)] (bg1) {};
+    \node[panel_bg, fill=uclDarkPurple, fit=(p2)] (bg2) {};
+    \node[panel_bg, fill=uclDarkPurple, fit=(p3)] (bg3) {};
 \end{scope}
 
 %% --- FLOW ARROWS BETWEEN PANELS ---

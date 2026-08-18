@@ -11,7 +11,10 @@ Figures for my thesis and other projects:
 - Isotopologue Extrapolation
     - [Original Equation](/Isotopologue_extrapolation/ie.pdf)
     - [ML Equation](/Isotopologue_extrapolation/ie_ml.pdf)
-- [MARVEL Algorithm](/MARVEL/marvel_algorithm_pdf)
+- MARVEL
+    - [MARVEL Algorithm](/MARVEL/marvel_algorithm.pdf)
+    - [Where Legacy MARVEL Breaks](/MARVEL/marvel_breaks.pdf)
+    - [MARVEL-GNN](/MARVEL/marvel_gnn.pdf)
 - Neural Network Structures
     - [Single Trunk - CO2 Basic](/Neural_Networks/basic_CO2/neural_network_basic.pdf)
     - [Shared Trunk - Combined CO/CO₂](/Neural_Networks/shared_CO_CO2/neural_network_shared_trunk.pdf)
