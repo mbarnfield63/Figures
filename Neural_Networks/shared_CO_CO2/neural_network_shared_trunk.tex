@@ -12,23 +12,23 @@
 
 % COLORS
 \usepackage{xcolor}
-\colorlet{myred}{red!80!black}
-\colorlet{myblue}{blue!80!black}
-\colorlet{mygreen}{green!60!black}
-\colorlet{myorange}{orange!70!red!60!black}
-\colorlet{mydarkred}{red!30!black}
-\colorlet{mydarkblue}{blue!40!black}
-\colorlet{mydarkgreen}{green!30!black}
+% UCL brand accessible data-viz palette (matches basic_CO2/neural_network_basic.tex)
+\definecolor{uclDarkPurple}{HTML}{361A54}
+\definecolor{uclLightPink}{HTML}{E645AB}
+\definecolor{uclLightOrange}{HTML}{E66C37}
+\definecolor{uclLightGreen}{HTML}{1AAB40}
+\definecolor{uclLightBlue}{HTML}{118DFF}
+\definecolor{uclDarkRed}{HTML}{751441}
 
 % STYLES
 \tikzset{
   >=latex, % for default LaTeX arrow head
-  node/.style={thick,circle,draw=myblue,minimum size=20,inner sep=0.5,outer sep=0.6},
-  node in/.style={node,green!20!black,draw=mygreen!30!black,fill=mygreen!25},
-  node trunk/.style={node,blue!20!black,draw=myblue!30!black,fill=myblue!20},
-  node head/.style={node,orange!20!black,draw=myorange!30!black,fill=myorange!20},
-  node out/.style={node,red!20!black,draw=myred!30!black,fill=myred!20},
-  connect/.style={thick,mydarkblue},
+  node/.style={thick,circle,draw=uclLightBlue,minimum size=22,inner sep=0.5,outer sep=0.6},
+  node in/.style={node,draw=uclLightPink,fill=uclLightPink!25},
+  node trunk/.style={node,draw=uclDarkPurple,fill=uclDarkPurple!90!white,text=white},
+  node head/.style={node,draw=uclLightOrange,fill=uclLightOrange!20},
+  node out/.style={node,draw=uclLightGreen,fill=uclLightGreen!25},
+  connect/.style={thick,uclDarkPurple},
   label/.style={font=\small,align=center},
   box/.style={draw, thick, rounded corners, inner sep=10pt, fill opacity=0.05}
 }
@@ -55,16 +55,16 @@
   
   % Background box for inputs
   \begin{pgfonlayer}{background}
-    \node[box, fit=(N1-1) (N1-i2), fill=mygreen!3] (input-box) {};
+    \node[box, fit=(N1-1) (N1-i2), fill=uclLightPink!3] (input-box) {};
   \end{pgfonlayer}
 
   % Labels for input groups
-  \node[label, mygreen!60!black, align=center] at (0.2, 4.2) {Input\\Features};
-  \node[label, mygreen!60!black, align=center] at (0.2, 1.05) {Molecule\\Embedding};
-  \node[label, mygreen!60!black, align=center] at (0.2, -1.95) {Isotopologue\\Embedding};
+  \node[label, uclLightPink!70!black, align=center] at (0.2, 4.2) {Input\\Features};
+  \node[label, uclLightPink!70!black, align=center] at (0.2, 1.05) {Molecule\\Embedding};
+  \node[label, uclLightPink!70!black, align=center] at (0.2, -1.95) {Isotopologue\\Embedding};
 
   % Label above input box
-  \node[label, mygreen!60!black, align=center, above=2mm of input-box.north] {Concatenated\\Features};
+  \node[label, uclLightPink!70!black, align=center, above=2mm of input-box.north] {Concatenated\\Features};
   
   % --- LAYER 2: HIDDEN LAYERS (TRUNK) ---
   % --- TRUNK 1 (x=2.5) --- (256 nodes, 5 circles)
@@ -96,11 +96,11 @@
   
   % --- BACKGROUND BOX for TRUNK ---
   \begin{pgfonlayer}{background}
-    \node[box, fit=(N2-1) (N2-5) (N3-1) (N3-4), fill=myblue!3] (trunk-box) {};
+    \node[box, fit=(N2-1) (N2-5) (N3-1) (N3-4), fill=uclDarkPurple!3] (trunk-box) {};
   \end{pgfonlayer}
-  
+
   % Label above trunk box
-  \node[label, myblue!60!black, align=center, above=2mm of trunk-box.north] {Hidden Layers (256 $\to$ 128)};
+  \node[label, uclDarkPurple, align=center, above=2mm of trunk-box.north] {Hidden Layers (256 $\to$ 128)};
   
   % --- LAYER 3: ADAPTER HEADS ---
   % --- Head 1 (y-shifted up) ---
@@ -125,7 +125,7 @@
     
     % Box for head 1
     \begin{pgfonlayer}{background}
-      \node[box, fit=(N4-h1-1) (N5-h1) (N4-h1-2), fill=myorange!3] (head1-box) {};
+      \node[box, fit=(N4-h1-1) (N5-h1) (N4-h1-2), fill=uclLightOrange!3] (head1-box) {};
     \end{pgfonlayer}
     
     \end{scope}
@@ -156,13 +156,13 @@
     
     % Box for head 2
     \begin{pgfonlayer}{background}
-      \node[box, fit=(N4-h2-1) (N5-h2) (N4-h2-2), fill=myorange!3] (head2-box) {};
+      \node[box, fit=(N4-h2-1) (N5-h2) (N4-h2-2), fill=uclLightOrange!3] (head2-box) {};
     \end{pgfonlayer}
     
     \end{scope}
   
   % --- Output Label (centered above output heads, outside boxes) ---
-  \node[label, myred!60!black, align=center] at (6, 5.5) {Isotopologue-Specific\\[-0.2em]Corrections};
+  \node[label, uclLightGreen!70!black, align=center] at (6, 5.5) {Isotopologue-Specific\\[-0.2em]Corrections};
   
 \end{tikzpicture}
 
