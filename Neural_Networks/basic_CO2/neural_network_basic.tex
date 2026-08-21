@@ -18,24 +18,24 @@
 
 % COLORS
 \usepackage{xcolor}
-\colorlet{myred}{red!80!black}
-\colorlet{myblue}{blue!80!black}
-\colorlet{mygreen}{green!60!black}
-\colorlet{myorange}{orange!70!red!60!black}
-\colorlet{mydarkred}{red!30!black}
-\colorlet{mydarkblue}{blue!40!black}
-\colorlet{mydarkgreen}{green!30!black}
+% UCL brand accessible data-viz palette (matches MARVEL/*.tex)
+\definecolor{uclDarkPurple}{HTML}{361A54}
+\definecolor{uclLightPink}{HTML}{E645AB}
+\definecolor{uclLightOrange}{HTML}{E66C37}
+\definecolor{uclLightGreen}{HTML}{1AAB40}
+\definecolor{uclLightBlue}{HTML}{118DFF}
+\definecolor{uclDarkRed}{HTML}{751441}
 
 % STYLES
 \tikzset{
   >=latex, % for default LaTeX arrow head
-  node/.style={thick,circle,draw=myblue,minimum size=22,inner sep=0.5,outer sep=0.6},
-  node in/.style={node,green!20!black,draw=mygreen!30!black,fill=mygreen!25},
-  node hidden/.style={node,blue!20!black,draw=myblue!30!black,fill=myblue!20},
-  node convol/.style={node,orange!20!black,draw=myorange!30!black,fill=myorange!20},
-  node out/.style={node,red!20!black,draw=myred!30!black,fill=myred!20},
-  connect/.style={thick,mydarkblue}, %,line cap=round
-  connect arrow/.style={-{Latex[length=4,width=3.5]},thick,mydarkblue,shorten <=0.5,shorten >=1},
+  node/.style={thick,circle,draw=uclLightBlue,minimum size=22,inner sep=0.5,outer sep=0.6},
+  node in/.style={node,draw=uclLightPink,fill=uclLightPink!25},
+  node hidden/.style={node,draw=uclDarkPurple,fill=uclDarkPurple!90!white,text=white},
+  node convol/.style={node,draw=uclLightOrange,fill=uclLightOrange!20},
+  node out/.style={node,draw=uclLightGreen,fill=uclLightGreen!25},
+  connect/.style={thick,uclDarkPurple}, %,line cap=round
+  connect arrow/.style={-{Latex[length=4,width=3.5]},thick,uclDarkPurple,shorten <=0.5,shorten >=1},
   node 1/.style={node in}, % node styles, numbered for easy mapping with \nstyle
   node 2/.style={node hidden},
   node 3/.style={node out}
@@ -80,9 +80,9 @@
   }
   
   % LABELS
-  \node[above=20,align=center,mygreen!60!black] at (N1-1.90) {input\\[-0.3em]layers\\(n =\\[-0.3em]num features)};
-  \node[above=2,align=center,myblue!60!black] at (N3-1.90) {hidden layers\\($m = 1024\to512\to256\to128\to64\to32$)};
-  \node[above=40,align=center,myred!60!black] at (N\Nnodlen-1.90) {single\\[-0.3em]output\\[-0.2em]layer\\(IE correction)};
+  \node[above=20pt,align=center,black] at (N1-1.90) {input\\[-0.3em]layers\\(n =\\[-0.3em]num features)};
+  \node[above=2pt,align=center,black] at (N3-1.90) {hidden layers\\($m = 1024\to512\to256\to128\to64\to32$)};
+  \node[above=40pt,align=center,black] at (N\Nnodlen-1.90) {single\\[-0.3em]output\\[-0.2em]layer\\(IE correction)};
   
 \end{tikzpicture}
 \end{document}
