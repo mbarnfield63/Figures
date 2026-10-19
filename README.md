@@ -20,3 +20,7 @@ Figures for my thesis and other projects:
     - [Shared Trunk - Combined CO/CO₂](/Neural_Networks/shared_CO_CO2/neural_network_shared_trunk.pdf)
     - [Quantum Number Assignment for CO₂](/Neural_Networks/quantum_number_CO2/nn_qn_assignment.pdf)
     - [Graph Neural Network](/Neural_Networks/GNN/gnn.pdf)
+- ExoMol
+    - [ExoMol Process (UCL colours)](/ExoMol_process/exomol_process_ucl.pdf)
+    - [ExoMol Process with Machine Learning (UCL colours)](/ExoMol_process/exomol_process_ml.pdf)
+    - [ExoMol Process with Machine Learning, measured-data highlight (UCL colours)](/ExoMol_process/exomol_process_ml_highlight.pdf)
