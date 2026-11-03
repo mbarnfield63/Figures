@@ -24,3 +24,5 @@ Figures for my thesis and other projects:
     - [ExoMol Process (UCL colours)](/ExoMol_process/exomol_process_ucl.pdf)
     - [ExoMol Process with Machine Learning (UCL colours)](/ExoMol_process/exomol_process_ml.pdf)
     - [ExoMol Process with Machine Learning, measured-data highlight (UCL colours)](/ExoMol_process/exomol_process_ml_highlight.pdf)
+- Agentic Workflows
+    - [Diatomic line-assignment review: agent spawning and validation](/Agentic_workflows/Diatomic_review/agent_flow.pdf)
